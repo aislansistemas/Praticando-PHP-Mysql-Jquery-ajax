@@ -70,6 +70,15 @@
 	 	$stmt->execute();
 	 	$retorno=$stmt->fetchAll(PDO::FETCH_OBJ);
 	 	echo json_encode($retorno);
+	 }else if($acao=='cadastro'){
+		 $query="insert into tb_usuarios(usuario,senha)
+	 	 values(:usuario,:senha)";
+	 	 $stmt=$conexao->prepare($query);
+	 	 $stmt->bindValue(':usuario',$_POST['usuario']);
+	 	 $stmt->bindValue(':senha',$_POST['senha']);
+	 	 $stmt->execute();
+	
+	 	 header('Location: index.php?acao=criado');
 	 }
 
 ?>

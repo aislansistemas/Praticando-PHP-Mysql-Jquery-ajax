@@ -24,7 +24,6 @@
 			box-shadow: 10px 20px 40px;
 		}
 		
-
 	</style>
 	<script type="text/javascript">
 		function atualizar(id,nome,genero,classificacao,ano){
@@ -114,7 +113,7 @@
 
 	<div class="display-3 text-light text-center pt-5">Lista de filmes</div>
 	<div style="display: block" class="container pt-5">
-		<a href="tela_inicial.php" class="btn btn-warning text-dark  col-2"><span class="h5">Inserir filme</span></a>
+		<a href="tela_inicial.php" class="btn btn-warning text-dark  "><span class="h5">Inserir filme</span></a>
 	</div>	
 	<div class="container a " id="a">
 		<div class="row">
