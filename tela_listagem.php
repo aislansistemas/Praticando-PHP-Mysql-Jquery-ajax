@@ -29,18 +29,18 @@
 		function atualizar(id,nome,genero,classificacao,ano){
 			let div=document.createElement('div')
 			div.className="d-flex justify-content-center"
-			div.style="position:absolute"
+			div.style="position:absolute;background: rgba(20,20,20,0.6);width:50%;"
 
 			let form=document.createElement('form')
 			form.action="validador.php?acao=atualizar"
 			form.method="Post"
 			form.className="form-group row d-flex justify-content-center"
-
+			form.style="width:40%;"
 			let inputnome=document.createElement('input')
-			
+			inputnome.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange'
 			inputnome.type="text"
 			inputnome.name='nome'
-			inputnome.className="form-control row w-25"
+			inputnome.className="form-control row mt-5"
 			inputnome.value=nome
 
 			let inputid=document.createElement('input')
@@ -49,33 +49,35 @@
 			inputid.value=id
 
 			let inputgenero=document.createElement('input')
-			
+			inputgenero.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange'
 			inputgenero.type="text"
 			inputgenero.name='genero'
-			inputgenero.className="form-control w-25"
+			inputgenero.className="form-control mt-5"
 			inputgenero.value=genero
 
 			let inputclassificacao=document.createElement('input')
+			inputclassificacao.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange'
 			inputclassificacao.type="text"
 			inputclassificacao.name='classificacao'
-			inputclassificacao.className="form-control w-25"
+			inputclassificacao.className="form-control mt-5"
 			inputclassificacao.value=classificacao
 
 			let inputano=document.createElement('input')
+			inputano.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange'
 			inputano.type="text"
 			inputano.name='ano'
-			inputano.className="form-control w-25"
+			inputano.className="form-control mt-5"
 			inputano.value=ano
 
 			
 			let button=document.createElement('button')
 			button.type='submit'
-			button.className='mt-2 btn btn-success'
-			button.innerHTML='Confirmar'
+			button.className='mt-4 btn btn-success'
+			button.innerHTML='atualizar'
 
 			let link=document.createElement('a')
 			link.href='tela_listagem.php'
-			link.className='ml-5 mt-2 btn btn-danger'
+			link.className='ml-5 mt-4 btn btn-danger'
 			link.innerHTML='Cancelar'
 
 			div.appendChild(form)
@@ -86,16 +88,12 @@
 			form.appendChild(inputid)
 			form.appendChild(button)
 			form.appendChild(link)
-			
-			let filmes=document.getElementById('filmes_'+id)
+
+			document.getElementById('limpa').innerHTML=""
+			let filmes=document.getElementById('aa')
 	
 			filmes.innerHTML=""
-			filmes.insertBefore(form,filmes[0])
-			
-			document.getElementById('b').innerHTML=""
-			document.getElementById('c').innerHTML=""
-			document.getElementById('d').innerHTML=""
-			document.getElementById('e').innerHTML=""	
+			filmes.insertBefore(div,filmes[0])	
 		}
 		function deletar(id){
 			location.href='validador.php?acao=deletar&id='+id
@@ -115,8 +113,8 @@
 	<div style="display: block" class="container pt-5">
 		<a href="tela_inicial.php" class="btn btn-warning text-dark  "><span class="h5">Inserir filme</span></a>
 	</div>	
-	<div class="container a " id="a">
-		<div class="row">
+	<div class="container a " id="aa">
+		<div class="row" id="limpa">
 		<table class="table gg">
 			<thead id="f" class="h2 text-warning">
 				<th>Nome</th>
@@ -154,5 +152,4 @@
 
 		</div>
 	</div>
-	
 </html>
