@@ -21,10 +21,15 @@
 			width: 350px;		
 			background: rgba(250,250,250,0.2);
 			border-radius: 8px;
+			transition: background 1s;
 		}	
+		.formu:hover{
+			background: rgba(240,240,240,0.3);
+		}
 		.interno{
 			padding-top: 90px;
 		}
+
 
 	</style>
 	<script type="text/javascript">

@@ -15,15 +15,21 @@
 			background: url('img/film.jpg') no-repeat center;
 		}
 		.forma{
-			color: white;
+			color: #CFCFCF;
 			height: 550px;
 			border-radius: 12px;
 			width: 450px;
 			padding-top: 90px;
 			margin:100px auto;
 			background: rgba(80,80,80,0.4);
+			border:0;
+			transition: background 1s,color 2s;
 		}
-		
+		.forma:hover{
+			background: rgba(150,150,150,0.4);
+			color:white;
+		}
+
 	</style>
 </head>
 <body>
@@ -35,10 +41,10 @@
 		<div class="row">
 		
 		<form class="form-group" action="validador.php?acao=inserir" method="Post">
-		Nome:<input style="background: rgba(20,20,20,0.3);color: #dedede" class="form-control" type="text" name="nome" ><br>
-		Gênero:<input style="background: rgba(20,20,20,0.3);color: #dedede" class="form-control" type="text" name="genero" ><br>
-		Classificação:<input  style="background: rgba(20,20,20,0.3);color: #dedede"class="form-control" type="text" name="classificacao" ><br>
-		Ano:<input style="background: rgba(20,20,20,0.3);color: #dedede" class="form-control" type="text" name="ano" ><br>
+		Nome:<input style="background: rgba(20,20,20,0.3);color: #dedede;border: 0;" class="form-control inp" type="text" name="nome" ><br>
+		Gênero:<input style="background: rgba(20,20,20,0.3);color: #dedede;border: 0" class="form-control" type="text" name="genero" ><br>
+		Classificação:<input  style="background: rgba(20,20,20,0.3);color: #dedede;border: 0"class="form-control" type="text" name="classificacao" ><br>
+		Ano:<input style="background: rgba(20,20,20,0.3);color: #dedede;border: 0" class="form-control" type="text" name="ano" ><br>
 		<input class="btn btn-success" type="submit" value="Inserir">
 		<h5 class="text-danger text-center pt-3"><?php if(isset($_GET['error'])){
 				echo "Existem campos não preenchidos";

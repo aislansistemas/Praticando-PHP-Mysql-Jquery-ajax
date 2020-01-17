@@ -23,6 +23,15 @@
 			margin-top: 20px;
 			box-shadow: 10px 20px 40px;
 		}
+		tr{
+			transition: background 0.9s,color 0.9s;
+		}
+		tbody tr:hover{
+			background: rgba(250,250,250,0.2);
+			color: #C1CDCD;
+			box-shadow: 4px 4px 4px #8B7500;
+			transition-property: height 500px;
+		}
 		
 	</style>
 	<script type="text/javascript">
@@ -63,7 +72,7 @@
 			inputclassificacao.value=classificacao
 
 			let inputano=document.createElement('input')
-			inputano.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange'
+			inputano.style='background: rgba(80,80,80,0.4);color:white;border-bottom-color: orange;'
 			inputano.type="text"
 			inputano.name='ano'
 			inputano.className="form-control mt-5"
