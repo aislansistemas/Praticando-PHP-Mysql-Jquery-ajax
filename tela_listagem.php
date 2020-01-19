@@ -103,9 +103,51 @@
 	
 			filmes.innerHTML=""
 			filmes.insertBefore(div,filmes[0])	
+
 		}
 		function deletar(id){
-			location.href='validador.php?acao=deletar&id='+id
+			
+    		let div=document.createElement('div')
+			div.className="d-flex justify-content-center"
+			div.style="background:rgba(20,20,20,0.3);padding-top:10%"
+
+			let h4=document.createElement('h4')
+			h4.innerHTML=" Tem certeza que deja exluir?"
+			h4.className="text-white"
+
+			let form=document.createElement('form')
+			form.action="validador.php?acao=deletar"
+			form.method="Post"
+			form.className="row d-flex justify-content-center"
+			form.style="width:400px;"
+
+			let inputid=document.createElement('input')
+			inputid.type='hidden'
+			inputid.name='id'
+			inputid.value=id
+			
+			let button=document.createElement('button')
+			button.type='submit'
+			button.className='mt-2 btn btn-success'
+			button.innerHTML='Confirmar'
+
+			let link=document.createElement('a')
+			link.href='tela_listagem.php'
+			link.className='ml-5 mt-2 btn btn-danger'
+			link.innerHTML='Cancelar'
+
+			div.appendChild(h4)
+			div.appendChild(form)	
+			form.appendChild(inputid)
+			form.appendChild(button)
+			form.appendChild(link)
+			
+			document.getElementById('limpa').innerHTML=""
+			let filmes=document.getElementById('aa')
+	
+			filmes.innerHTML=""
+			filmes.insertBefore(div,filmes[0])
+		//	location.href='validador.php?acao=deletar&id='+id
 		}
 
 	</script>

@@ -60,7 +60,7 @@
 	 }else if($acao=='deletar'){
 	 	$query="delete from filmes where id= :id";
 	 	$stmt=$conexao->prepare($query);
-	 	$stmt->bindValue(':id',$_GET['id']);
+	 	$stmt->bindValue(':id',$_POST['id']);
 	 	$stmt->execute();
 	 	header('Location: tela_listagem.php');
 	 }else if($acao=='busca'){
